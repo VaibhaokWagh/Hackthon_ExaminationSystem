@@ -1,0 +1,18 @@
+<h4>Select your exam here!</h4>
+<table>
+    <mat-card>
+    <thead>
+        <th>Topic Id</th>
+        <th>Topic Name</th>
+        <th>Topic Level</th>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let t of topics">
+            <td>{{t.tid}}</td>
+            <td>{{t.tname}}</td>
+            <td>{{t.tlevel}}</td>
+            <td><button mat-raised-button color="accent" (click) = "selBtnClicked(t.tid)"   >Select</button></td>
+        </tr>
+    </tbody>
+</mat-card>
+</table>

@@ -1,0 +1,24 @@
+<button class = "btn bttn" (click)="back()">Back to admin page</button>
+<br>
+
+
+
+<h3>All Questions</h3>
+<br>
+
+    
+    
+<table>
+    
+    <mat-card class="=text-center">
+    <thead >
+        <th>Qid</th><th>Question</th><th>Remove Question</th>
+    </thead>
+    <tr *ngFor="let q of questions">
+        <td>{{q.qid}}</td>
+        <td>{{q.qname}}</td>
+        <td>
+        <button mat-raised-button color="warn" (click)="deleteQuestion(q.qid)">Delete</button></td>
+    </tr>
+</mat-card>
+</table>

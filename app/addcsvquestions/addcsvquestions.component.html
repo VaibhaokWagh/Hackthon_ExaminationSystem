@@ -1,0 +1,40 @@
+<button class = "btn bttn" (click)="back()">Back to admin page</button>
+
+
+<div class="bootstrap-wrappper">
+  <div class="container text-center">
+  <div class="col-md-6">
+  
+  <div class="col-md-10 offset-md-7">
+  
+  
+    <mat-card class="=text-center mt20">
+
+<form (ngSubmit)="upload()" enctype="multipart/form-data">
+    <table>
+        <tr>
+        <td>
+            Select Topic
+        </td>
+        <td>
+            <select>
+                <option>Java</option>
+                <option>Python</option>
+                <option>Mixed</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Question File
+        </td>
+        <td>
+            <input type="file" name="t1" (change)="onFileChange($event)" accept=".csv" />
+    
+        </td>
+    </tr>
+ 
+    </table> 
+    <button mat-raised-button color="primary" type="submit">Upload</button>
+</form>
+
