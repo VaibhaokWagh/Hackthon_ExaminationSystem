@@ -1,0 +1,124 @@
+package com.lti.app.pojo;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "questions")
+public class Questions
+{
+	@Id
+	private String qid;
+	private String qname;
+	private String option1;
+	private String option2;
+	private String option3;
+	private String option4;
+	private String Correct_Ans;
+	private String tid;
+
+	public Questions()
+	{
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Questions(String qid, String qname, String option1, String option2, String option3, String option4,
+			String correct_Ans, String tid)
+	{
+		super();
+		this.qid = qid;
+		this.qname = qname;
+		this.option1 = option1;
+		this.option2 = option2;
+		this.option3 = option3;
+		this.option4 = option4;
+		Correct_Ans = correct_Ans;
+		this.tid = tid;
+	}
+
+	
+	public String getQid() {
+		return qid;
+	}
+
+	public void setQid(String qid) {
+		this.qid = qid;
+	}
+
+	public String getQname() {
+		return qname;
+	}
+
+	public void setQname(String qname) {
+		this.qname = qname;
+	}
+
+	public String getOption1() {
+		return option1;
+	}
+
+	public void setOption1(String option1) {
+		this.option1 = option1;
+	}
+
+	public String getOption2()
+	{
+		return option2;
+	}
+
+	public void setOption2(String option2)
+	{
+		this.option2 = option2;
+	}
+
+	public String getOption3()
+	{
+		return option3;
+	}
+
+	public void setOption3(String option3)
+	{
+		this.option3 = option3;
+	}
+
+	public String getOption4()
+	{
+		return option4;
+	}
+
+	public void setOption4(String option4)
+	{
+		this.option4 = option4;
+	}
+
+	public String getCorrect_Ans()
+	{
+		return Correct_Ans;
+	}
+
+	public void setCorrect_Ans(String correct_Ans)
+	{
+		Correct_Ans = correct_Ans;
+	}
+
+	public String getTid()
+	{
+		return tid;
+	}
+
+	public void setTid(String tid)
+	{
+		this.tid = tid;
+	}
+
+	@Override
+	public String toString()
+	{
+		return "Questions [qid=" + qid + ", qname=" + qname + ", option1=" + option1 + ", option2=" + option2
+				+ ", option3=" + option3 + ", option4=" + option4 + ", Correct_Ans=" + Correct_Ans + ", tid=" + tid
+				+ "]";
+	}
+
+}
